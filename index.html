@@ -3,36 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Chat</title>
+    <title>Vinayak Patil - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="chat-container">
-        <div class="chat-box">
-            <div class="message user">
-                <div class="avatar">
-                    <img src="user-avatar.png" alt="User Avatar">
-                </div>
-                <div class="text">
-                    <p>Hi there! Here are some of my recent projects:</p>
-                    <ul>
-                        <li><a href="https://github.com/your-repo1" target="_blank">Project 1</a></li>
-                        <li><a href="https://github.com/your-repo2" target="_blank">Project 2</a></li>
-                    </ul>
-                </div>
-                <div class="timestamp">10:30 AM</div>
+<body onload="startFunction()">
+    <div class="container">
+        <header>
+            <h1>Vinayak Patil</h1>
+            <p>Computer Engineering Student</p>
+            <p id="lastseen">last seen today at</p>
+        </header>
+        <main>
+            <ul id="listUL" class="chat-list"></ul>
+            <div class="input-container">
+                <input type="text" id="inputMSG" placeholder="Type a message..." onkeydown="isEnter(event)">
+                <button onclick="sendMsg()">Send</button>
             </div>
-            <div class="message bot">
-                <div class="avatar">
-                    <img src="bot-avatar.png" alt="Bot Avatar">
-                </div>
-                <div class="text">
-                    <p>Great! I’ll check them out.</p>
-                </div>
-                <div class="timestamp">10:32 AM</div>
-            </div>
-        </div>
+        </main>
     </div>
+    <audio id="audio" src="assets/sentmessage.mp3" preload="auto"></audio>
     <script src="script.js"></script>
 </body>
 </html>
